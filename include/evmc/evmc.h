@@ -641,6 +641,9 @@ struct evmc_context
 {
     /** Function table defining the context interface (vtable). */
     const struct evmc_context_fn_table* fn_table;
+    // Extensible parameters for passing VM configuration
+    // bit 64 is currently occupied, indicating whether to use FreeStorageVMSchedule
+    uint64_t flags;
 };
 
 
